@@ -30,10 +30,16 @@ export default function Register() {
       toast.error(data.error);
     }
   }
+
+  const formStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '1rem',
+  }
   
   return (
     <div>
-      <form className="form register" onSubmit={registerUser}>
+      <form style={formStyle} onSubmit={registerUser}>
         <label htmlFor="name">Name</label>
         <input type="text" name="name" id="name" value={data.name} onChange={(e) => {
           setData({ ...data, name: e.target.value });

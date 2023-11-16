@@ -30,10 +30,16 @@ export default function Login() {
     }
 
   }
+
+  const formStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '1rem',
+  }
   
   return (
     <div>
-      <form className="form login" onSubmit={loginUser}>      
+      <form style={formStyle} onSubmit={loginUser}>      
         <label htmlFor="email">Email</label>
         <input type="email" name="email" id="email" value={data.email} onChange={(e) => {
           setData({ ...data, email: e.target.value})
